@@ -381,7 +381,7 @@ nav {
 .sos_info {
     height: 300px;
     background: rgb(220, 221, 224);
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -394,28 +394,35 @@ nav {
     color: var(--heading-color);
     text-align: center;
     font-size: 28pt;
+    margin: 0;
 }
 
 .sos_info p {
     font-size: 14pt;
+    width: 50vw;
+    text-align: center;
 }
 
 /*-------------------------------- WHY SOS --------------------------------------- */
 
+.articles {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .article_links {
     width: 60vw;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.article_links img {
-    width: 300px;
+    
 }
 
 .article_links a {
-    width: 400px;
+    width: 450px;
     height: 200px;
 }
 
@@ -434,19 +441,28 @@ nav {
     background-size: cover;
 }
 
-.articles {
-    height: 500px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 .articles_heading {
     color: var(--heading-color);
     text-align: center;
     font-size: 28pt;
+    
+
 }
 
+/*-------------------------------- Our Clients --------------------------------------- */
+
+.clients {
+    height: 300px;
+    background: rgb(220, 221, 224);
+}
+
+.clients_heading {
+    margin: 15px auto;
+    display: block;
+    color: var(--heading-color);
+    text-align: center;
+    font-size: 28pt;
+}
 
 /*-------------------------------- Footer --------------------------------------- */
 
@@ -458,5 +474,6 @@ footer {
 
 
 .footer_logo {
-    width: 200px;
+    width: 100px;
+    margin: 15px;
 }
