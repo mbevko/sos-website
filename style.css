@@ -470,10 +470,71 @@ nav {
 footer {
     height: 500px;
     background-color: var(--font-color);
+    padding: 50px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
 }
 
 
 .footer_logo {
-    width: 100px;
-    margin: 15px;
+    width: 80px;
+
+}
+
+.footer_sitemap {
+    list-style: none;
+    display: flex;
+    width: 350px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+
+}
+
+.footer_sitemap a {
+    color: var(--main-bg-color);
+    text-decoration: none;
+    font-size: 10pt;
+    
+    
+}
+
+.contact_footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 9pt;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.contact_footer a {
+    text-decoration: none;
+    color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+}
+
+.contact_header_icon {
+    width: 18px;
+    margin-right: 5px;
+}
+
+.linkedin-icon {
+    width: 19px;
+    margin-right: 5px;
+}
+
+.contact_head_cont {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
 }
