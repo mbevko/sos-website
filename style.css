@@ -65,11 +65,12 @@ body {
 
     .contact_header {
         padding: 0 50px;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         z-index: 6;
+        padding: 15px 0;
     }
 
     .contact_header_icon {
@@ -79,7 +80,8 @@ body {
 
     .hamburger_menu {
         display: block;
-        
+        cursor: pointer;
+        width: 40px;
     }
 
     .mobile_logo {
@@ -111,7 +113,7 @@ nav {
 
 .logo {
     color: var(--sos-red);
-    width: 100px;
+    width: 130px;
 }
 
 .nav_links {
@@ -219,6 +221,10 @@ nav {
         height: 300px;
     }
 
+    .contact_header {
+        background: var(--main-bg-color);
+    }
+
 }
 
 /*-------------------------------- MAIN HEADER --------------------------------------- */
@@ -241,7 +247,6 @@ nav {
     align-items: flex-start;
     padding: 0 150px;
     color: var(--heading-color);
-
 }
 
 .header_title {
@@ -314,12 +319,22 @@ nav {
     }
 }
 
+/*-------------------------------- SOFTWARE --------------------------------------- */
+
 .software {
-    padding: 0 150px;
     min-height: 500px;
     display: flex; 
     flex-direction: column;
     min-height: 600px;
+    transition: .3s;    
+}
+
+.software_stretch {
+    min-height: 500px;
+    display: flex; 
+    flex-direction: column;
+    min-height: 700px;
+    transition: .3s;
 }
 
 .software_heading {
@@ -337,6 +352,25 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
+}
+
+.software_links2_closed {
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.software_links2 {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    transition: .3s;
+    height: 200px;
+    margin-top: 50px;
 }
 
 .software_links a {
@@ -348,6 +382,27 @@ nav {
     text-align: center;
     display: block;
 }
+
+.software_links2_closed a {
+    color: var(--font-color);
+    font-size: 14pt;
+    text-decoration: none;
+    width: 180px;
+    height: 160px;
+    text-align: center;
+    display: block;
+}
+
+.software_links2 a {
+    color: var(--font-color);
+    font-size: 14pt;
+    text-decoration: none;
+    width: 180px;
+    height: 160px;
+    text-align: center;
+    display: block;
+}
+
 
 .index_main_body img {
     width: 60px;
@@ -371,15 +426,102 @@ nav {
     color: var(--main-bg-color)
 }
 
-/* @media (max-width: 1500px){
+.mobile_software_p {
+    display: none;
+}
 
-} */
+.mobile_software_btn {
+    display: none;
+}
 
+/*-------------------------------- SOFTWARE MOBILE --------------------------------------- */
+
+@media (max-width: 1200px) {
+    .software_links2 {
+        display: none;  
+    }
+
+    .discover_btn {
+        display: none;
+    }
+
+
+
+    .software_links {
+        width: 600px;
+        margin: auto;
+    }
+
+    .mobile_software_btn {
+        width: 300px;
+        height: 70px;
+        border: solid 2px var(--heading-color); 
+        font-size: 14pt;
+        border-radius: 70px;
+        cursor: pointer;
+        color: var(--heading-color);
+        margin: auto;
+        display: block;
+        transition: .3s;
+    }
+}
+
+@media (max-width: 841px){
+
+.software {
+    min-height: 800px;
+}
+
+
+} 
+
+@media (max-width: 800px) {
+
+    .software {
+        min-height: 350px;
+        padding: 0;
+        display: flex;
+        align-items: space-evenly;
+    }
+
+    .software_heading {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .software_links {
+        display: none;
+    }
+
+    .software_links2 {
+        display: none;
+    }
+
+    .mobile_software_p {
+        font-size: 12pt;
+        text-align: left;
+        display: block;
+        color: var(--heading-color);
+    }
+    
+    .mobile_software_btn {
+        width: 200px;
+        height: 50px;
+        border: solid 2px var(--heading-color); 
+        font-size: 12pt;
+        border-radius: 70px;
+        cursor: pointer;
+        color: var(--heading-color);
+        margin: auto;
+        display: block;
+        transition: .3s;
+    }
+}
 
 /*-------------------------------- WHY SOS --------------------------------------- */
 
 .sos_info {
-    height: 300px;
+    min-height: 300px;
     background: rgb(220, 221, 224);
     display: flex; 
     flex-direction: column;
@@ -403,7 +545,18 @@ nav {
     text-align: center;
 }
 
-/*-------------------------------- WHY SOS --------------------------------------- */
+
+/*-------------------------------- WHY MOBILE --------------------------------------- */
+
+@media (max-width: 1400px){
+
+    .sos_info {
+        min-height: 500px;
+    }
+    
+    } 
+
+/*-------------------------------- BLOG --------------------------------------- */
 
 .articles {
     height: 700px;
@@ -475,10 +628,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
+   
 }
 
 
