@@ -64,13 +64,13 @@ body {
     }
 
     .contact_header {
-        padding: 0 50px;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        right: 0;
         z-index: 6;
-        padding: 15px 0;
+        height: 70px;
+        padding: 0
     }
 
     .contact_header_icon {
@@ -81,12 +81,15 @@ body {
     .hamburger_menu {
         display: block;
         cursor: pointer;
-        width: 40px;
+        width: 50px;
+        z-index: 10;
+        margin-right: 20px;
     }
 
     .mobile_logo {
         display: block;
-        width: 80px;
+        width: 120px;
+        margin-left: 20px;
     }
 
 }
@@ -102,6 +105,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     color: var(--heading-color);
+    
 }
 
 .nav_container {
@@ -152,8 +156,10 @@ nav {
     right: 0;
     transition: .3s;
     opacity: 0;
-    height: 100vh;
+    height: 100vh;    
 }
+
+
 
 /*-------------------------------- MOBILE NAV --------------------------------------- */
 
@@ -170,7 +176,6 @@ nav {
     }
 
     .mobile_nav {
-        width: 100vw;
         position: fixed;
         height: 100vh;
         z-index: 5;
@@ -178,31 +183,48 @@ nav {
         background: var(--font-color);
         padding: 0;
         margin: 0;
-        display: flex;
         flex-direction: column;
-        padding-left: 50px;
         justify-content: space-between;
         opacity: 1;
-        top: 0;
-        left: 0;
+        width: 100vw;
     }
-
 
     .mobile_nav_links {
         list-style: none;
         padding: 0;
-        height: 300px;
-        align-items: space-around;
+        height: 320px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+
     }
 
-    .mobile_nav a {
+    .mobile_nav_link {
         text-decoration: none;
-        color: var(--font-color);
         color: var(--main-bg-color);
         display: block;
+        height: 70px;
+        width: 100%;
+        padding-left: 30px;
+        display: flex;
+        background: rgba(217, 217, 217, 7%);
+        align-items: center;
+        font-size: 24pt;
+        font-weight: lighter;
+    }
+
+    .mobile_nav_articles {
+        text-decoration: none;
+        color: #327992;
+        display: block;
+        height: 70px;
+        width: 40%;
+        padding-left: 30px;
+        display: flex;
+        background: rgba(217, 217, 217, 7%);
+        align-items: center;
+        font-size: 24pt;
+        font-weight: lighter;
     }
 
     .mobile_nav_links a {
@@ -218,11 +240,30 @@ nav {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 300px;
+        height: 150px;
+    }
+
+    .mobile_contact a {
+        text-decoration: none;
+        color: var(--main-bg-color);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+    }
+
+    .mobile_contact_icon {
+        margin: 0 15px;
+        width: 25px;
     }
 
     .contact_header {
-        background: var(--main-bg-color);
+        background: var(--font-color);
+    }
+
+    .mobile_contact a p {
+        font-size: 11pt;
+        font-weight: lighter;
     }
 
 }
@@ -678,13 +719,15 @@ footer {
     margin-right: 5px;
 }
 
-.linkedin-icon {
-    width: 19px;
-    margin-right: 5px;
-}
 
 .contact_head_cont {
     width: 300px;
     display: flex;
     justify-content: space-between;
+}
+
+.white_space {
+    height: 100vh;
+    width: 100vw;
+    
 }
